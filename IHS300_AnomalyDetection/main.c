@@ -25,10 +25,10 @@ void print_2d_array(double** array, int rows, int cols) {
 }
 
 void print_evaluate(double* result) {
-    printf("Accuracy: %.2f \n", result[ACCURACY]);
-    printf("Precision: %.2f \n", result[PRECISION]);
-    printf("Recall: %.2f \n", result[RECALL]);
-    printf("F1 score: %.2f \n", result[F1_SCORE]);
+    printf("Accuracy: %.5f \n", result[ACCURACY]);
+    printf("Precision: %.5f \n", result[PRECISION]);
+    printf("Recall: %.5f \n", result[RECALL]);
+    printf("F1 score: %.5f \n", result[F1_SCORE]);
 }
 
 int main() {

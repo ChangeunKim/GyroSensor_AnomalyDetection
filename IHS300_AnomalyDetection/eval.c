@@ -24,11 +24,8 @@ void evaluate(int* y_true, int* y_pred, int size, double* results){
 
     // Calculate metrics
     results[ACCURACY] = (double)(true_positive + true_negative) / size;
-    results[PRECISION] = (true_positive + false_positive) ?
-        (double)true_positive / (true_positive + false_positive) : 0.0;
-    results[RECALL] = (true_positive + false_negative) ?
-        (double)true_positive / (true_positive + false_negative) : 0.0;
-    results[F1_SCORE] = (results[PRECISION] + results[RECALL]) ?
-        2 * (results[PRECISION] * results[RECALL]) / (results[PRECISION] + results[RECALL]) : 0.0;
+    results[PRECISION] = (double)true_positive / (true_positive + false_positive);
+    results[RECALL] = (double)true_positive / (true_positive + false_negative);
+    results[F1_SCORE] =  2 * (results[PRECISION] * results[RECALL]) / (results[PRECISION] + results[RECALL]);
 
 }

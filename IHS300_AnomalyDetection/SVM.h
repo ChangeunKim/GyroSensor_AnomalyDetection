@@ -1,6 +1,12 @@
 #ifndef SVM_H
 #define SVM_H
 
+/*
+	SVM.h
+
+	C implementation of SVM prediction logic given model files.
+*/
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>

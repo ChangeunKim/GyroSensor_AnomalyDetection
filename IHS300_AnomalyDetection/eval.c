@@ -1,7 +1,7 @@
 #include "eval.h"
 
-// Evaluation function for classification and anomaly detection tasks
-void evaluate(int* y_true, int* y_pred, int size, double* results){
+// Evaluation function for anomaly detection tasks
+void evaluate_anomaly(int* y_true, int* y_pred, int size, double* results){
     int true_positive = 0;
     int true_negative = 0;
     int false_positive = 0;
@@ -11,13 +11,13 @@ void evaluate(int* y_true, int* y_pred, int size, double* results){
         if (y_true[i] == 1 && y_pred[i] == 1) {
             true_positive++;
         }
-        else if (y_true[i] == 0 && y_pred[i] == 0) {
+        else if (y_true[i] == -1 && y_pred[i] == -1) {
             true_negative++;
         }
-        else if (y_true[i] == 0 && y_pred[i] == 1) {
+        else if (y_true[i] == -1 && y_pred[i] == 1) {
             false_positive++;
         }
-        else if (y_true[i] == 1 && y_pred[i] == 0) {
+        else if (y_true[i] == 1 && y_pred[i] == -1) {
             false_negative++;
         }
     }

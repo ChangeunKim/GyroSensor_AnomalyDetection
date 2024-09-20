@@ -68,7 +68,7 @@ int main() {
 
     // Evaluate prediction performance
     double results[4];
-    evaluate(y_true, predictions, size, results);
+    evaluate_anomaly(y_true, predictions, size, results);
 
     print_evaluate(results);
 

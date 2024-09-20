@@ -1,6 +1,12 @@
 #ifndef READ_CSV_H
 #define READ_CSV_H
 
+/*
+	read_csv.h
+
+	Helper functions that load csv files and save in C arrays.
+*/
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>

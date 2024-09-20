@@ -33,7 +33,7 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
-# Credential info
+# Confidential info
 model/
 data/
 *.csv

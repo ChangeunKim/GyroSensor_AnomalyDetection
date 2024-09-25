@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="read_csv.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -26,6 +23,24 @@
     </ClCompile>
     <ClCompile Include="eval.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AE.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LSTM.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vector.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_ae.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_svm.h">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +51,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="eval.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LSTM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

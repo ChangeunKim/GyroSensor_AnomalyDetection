@@ -14,6 +14,6 @@
 #define F1_SCORE  3
 
 // Evaluation function for anomaly detection tasks
-void evaluate_anomaly(int* y_true, int* y_pred, int size, double* results);
+void evaluate_anomaly(int* y_true, int* y_pred, int size, float* results);
 
 #endif

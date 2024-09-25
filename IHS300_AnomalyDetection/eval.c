@@ -1,7 +1,7 @@
 #include "eval.h"
 
 // Evaluation function for anomaly detection tasks
-void evaluate_anomaly(int* y_true, int* y_pred, int size, double* results){
+void evaluate_anomaly(int* y_true, int* y_pred, int size, float* results){
     int true_positive = 0;
     int true_negative = 0;
     int false_positive = 0;
@@ -23,9 +23,9 @@ void evaluate_anomaly(int* y_true, int* y_pred, int size, double* results){
     }
 
     // Calculate metrics
-    results[ACCURACY] = (double)(true_positive + true_negative) / size;
-    results[PRECISION] = (double)true_positive / (true_positive + false_positive);
-    results[RECALL] = (double)true_positive / (true_positive + false_negative);
+    results[ACCURACY] = (float)(true_positive + true_negative) / size;
+    results[PRECISION] = (float)true_positive / (true_positive + false_positive);
+    results[RECALL] = (float)true_positive / (true_positive + false_negative);
     results[F1_SCORE] =  2 * (results[PRECISION] * results[RECALL]) / (results[PRECISION] + results[RECALL]);
 
 }

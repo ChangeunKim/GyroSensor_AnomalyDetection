@@ -127,15 +127,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AE.c" />
     <ClCompile Include="eval.c" />
+    <ClCompile Include="LSTM.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="test_ae.h" />
+    <ClCompile Include="test_svm.h" />
     <ClCompile Include="read_csv.c" />
     <ClCompile Include="SVM.c" />
+    <ClCompile Include="vector.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AE.h" />
     <ClInclude Include="eval.h" />
+    <ClInclude Include="LSTM.h" />
     <ClInclude Include="read_csv.h" />
     <ClInclude Include="SVM.h" />
+    <ClInclude Include="vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,14 +1,14 @@
 #include "read_csv.h"
 
 // Read constant value from csv file
-double load_csv_constant(const char* filename) {
+float load_csv_constant(const char* filename) {
     FILE* file = fopen(filename, "r");
     if (!file) {
         perror("Unable to open file");
         exit(EXIT_FAILURE);
     }
 
-    double value;
+    float value;
     // Read the first (and only) value from the CSV file
     if (fscanf(file, "%lf", &value) != 1) {
         perror("Error reading value");
@@ -21,7 +21,7 @@ double load_csv_constant(const char* filename) {
 }
 
 // Read 1D array from csv file
-void load_csv_1d(const char* filename, double** data, int* size) {
+void load_csv_1d(const char* filename, float** data, int* size) {
     FILE* file = fopen(filename, "r");
     if (!file) {
         perror("Unable to open file");
@@ -40,7 +40,7 @@ void load_csv_1d(const char* filename, double** data, int* size) {
     rewind(file); // Reset file pointer to the beginning
 
     // Allocate memory for the array
-    *data = (double*)malloc((*size) * sizeof(double));
+    *data = (float*)malloc((*size) * sizeof(float));
 
     // Read the data
     for (int i = 0; i < *size; i++) {
@@ -51,7 +51,7 @@ void load_csv_1d(const char* filename, double** data, int* size) {
 }
 
 // Read 2D array from csv file
-void load_csv_2d(const char* filename, double*** data, int* rows, int* cols) {
+void load_csv_2d(const char* filename, float*** data, int* rows, int* cols) {
     FILE* file = fopen(filename, "r");
     if (!file) {
         perror("Unable to open file");
@@ -77,9 +77,9 @@ void load_csv_2d(const char* filename, double*** data, int* rows, int* cols) {
     rewind(file); // Reset file pointer to the beginning
 
     // Allocate memory for the 2D array
-    *data = (double**)malloc((*rows) * sizeof(double*));
+    *data = (float**)malloc((*rows) * sizeof(float*));
     for (int i = 0; i < *rows; i++) {
-        (*data)[i] = (double*)malloc((*cols) * sizeof(double));
+        (*data)[i] = (float*)malloc((*cols) * sizeof(float));
     }
 
     // Read the data into the 2D array
